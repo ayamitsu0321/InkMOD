@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
 @Mod(
         modid = InkMod.MODID,
@@ -45,6 +46,7 @@ public class InkMod {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         proxy.init();
+        OreDictionary.registerOre("dyeBlack", bucketInk);
     }
 
     @Mod.EventHandler
